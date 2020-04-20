@@ -119,13 +119,20 @@ export default {
       tecnico:"",
       valor:0,
       solicitante:this.solicitanteText,
-      telefono:this.telefonoText
+      telefono:this.telefonoText,
+      garantia:"",
+      notadecredito:"",
+      costomov:"0",
+      costoTotal:"",
+      minutosMov:"0",
+      horasExtra:"0",
+      costoExtra:"0",
+      costoSoporte:"0"
     }
     console.log(upSoporte);
     //this.upload;
       myRef.push(upSoporte)
-     .then(
-       (snapshot) => {
+     .then((snapshot) => {
      myRef.child(snapshot.key).update({"id": snapshot.key})
    },
    alert('Soporte Solicitado Exitosamente !')
